@@ -1,9 +1,78 @@
+<wxs src="./../common.wxs" module="func"/> 
 <view>
 <swiper class='swiper' indicator-dots='{{swiper.indicatordots}}' indicator-color='{{swiper.indicatorcolor}}' indicator-active-color='{{swiper.indicatoractivecolor}}' autoplay='{{swiper.autoplay}}' interval='{{swiper.interval}}'>
 <block wx:for="{{imgUrls}}" wx:key="key">
     <swiper-item>
-       <image src="{{item.ad_code}}" class="slide-image" /> 
+       <image src="{{func.deal_pic(item.ad_code)}}" class="slide-image" /> 
     </swiper-item>
   </block>
 </swiper>
+</view>
+<view class='partner_pic'>
+<image src='{{func.deal_pic("/template/mobile/new/static/images/partnerChannel.jpg")}}'></image>
+</view>
+<!--内容  -->
+<view class='content'>
+<view class='recommend'>
+<view class='recommend-item1'>
+<p>凯迪拉客</p>
+<p>500w</p>
+<image src='{{func.deal_pic("/public/upload/goods/thumb/246/goods_thumb_246_373_366_e4fab6659054ff6326c545faa63d2e95.jpeg")}}'></image>
+</view>
+
+<!--两个小保养  -->
+<view class='recommend-item1'>
+<view class='curing'>
+<view>
+<p>斯蒂芬</p>
+<p>5654w</p>
+</view>
+<view>
+<image src='{{func.deal_pic("/public/upload/goods/thumb/246/goods_thumb_246_373_366_e4fab6659054ff6326c545faa63d2e95.jpeg")}}'></image>
+</view>
+</view>
+<view class='curing'>
+<view>
+<p>斯蒂芬</p>
+<p>5654w</p>
+</view>
+<view>
+<image src='{{func.deal_pic("/public/upload/goods/thumb/246/goods_thumb_246_373_366_e4fab6659054ff6326c545faa63d2e95.jpeg")}}'></image>
+</view>
+</view>
+</view>
+</view>
+<!--汽车养护  -->
+<view class='list'>
+ <view class='btn-view'><button class='btn-text'>养护产品</button><button >更多>></button></view>
+ <!--goodslist start  -->
+ <view class='goodslist'> 
+ <view class='goods'>
+ <image class='goods-pic' src='{{func.deal_pic("/public/upload/goods/thumb/246/goods_thumb_246_373_366_e4fab6659054ff6326c545faa63d2e95.jpeg")}}'></image>
+ <view class='price'>
+ <p class="goods-name">设计开发活动十分谨慎看法和</p>
+ <p class="goods-price">码蜂乐价：122w</p>
+ </view>
+ </view>
+
+
+  <view class='goods'>
+ <image class='goods-pic' src='{{func.deal_pic("/public/upload/goods/thumb/246/goods_thumb_246_373_366_e4fab6659054ff6326c545faa63d2e95.jpeg")}}'></image>
+ <view class='price'>
+ <p class="goods-name">设计开发活动十分谨慎看法和</p>
+ <p class="goods-price">码蜂乐价：122w</p>
+ </view>
+ </view>
+
+  <view class='goods'>
+ <image class='goods-pic' src='{{func.deal_pic("/public/upload/goods/thumb/246/goods_thumb_246_373_366_e4fab6659054ff6326c545faa63d2e95.jpeg")}}'></image>
+ <view class='price'>
+ <p class="goods-name">设计开发活动十分谨慎看法和</p>
+ <p class="goods-price">码蜂乐价：122w</p>
+ </view>
+ </view>
+ </view>
+ <!--goodslist end  -->
+</view>
+
 </view>

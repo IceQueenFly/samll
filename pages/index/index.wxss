@@ -6,3 +6,142 @@
   width: 100%;
   height: 100%;
 }
+.partner_pic{
+  width: 100%;
+  height: 100rpx;
+}
+.partner_pic image{
+  width: 100%;
+  height: 100rpx;
+}
+.content{
+  background-color:#f3f3f3;
+  width: 100%;
+  /* height: auto; */
+  /* display: flex; */
+}
+.recommend{
+  display: inline-flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.recommend-item1{
+  width: 49.8%;
+  height: 300rpx;
+  margin-top: 2rpx;
+  background-color: #fff; 
+  text-align: center;
+  
+  
+}
+.recommend-item1 image{
+  width: 80%;
+  height: 200rpx;
+  
+}
+.recommend-item1 p{
+  width: 80%;
+  height: 30rpx;
+  display: block;
+  font-size: 25rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  font-weight: 700;
+}
+.recommend-item1 p:nth-child(2){
+  color:#ffa237;
+  font-size: 20rpx; 
+  
+}
+.curing{
+  width: 100%;
+  display: inline-flex;
+  flex-direction:row ;
+}
+.curing view{
+  width: 50%;
+  height: 145rpx;
+  justify-content: space-between;
+}
+.curing view image{
+  width: 100%;
+  height: 145rpx;
+}
+.list{
+  width: 100%;
+  height: 400rpx;
+  display: inline-block;
+  margin-top: 4rpx;
+}
+.list .btn-view{
+  width: 100%;
+  background-color: #fff;
+  height: 80rpx;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.list button{
+   background-color:  #fff;
+   width: 50%;
+}
+.list button {
+   text-align: right;
+   font-size: 25rpx;
+   color: #585454;
+   line-height: 80rpx;
+}
+.list button::after{
+  border: none;
+ 
+}
+.list .btn-text{
+  display: inline-block;
+  font-size: 30rpx;
+  font-weight: 700;
+  height: 80rpx;
+  text-align: left;
+  color:#ffa237;
+}
+.goodslist{
+  display: inline-block;
+  width: 100%;
+}
+.goods{
+  display: inline-block;
+  width: 49.8%;
+  height: 350rpx;
+  text-align: center;
+  background-color: #fff;
+  margin-top: 0.2%;
+  margin-right: 0.2%;
+}
+
+.goods-pic{
+  width: 80%;
+  height: 250rpx;
+}
+.price{
+  width: 100%;
+  height: 100rpx;
+}
+.price p{
+  width: 80%;
+  display: inline-block;
+  text-align: left;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.goods-name{
+  font-size: 25rpx;
+  font-weight: 700;
+}
+.goods-price{
+  font-size: 23rpx;
+  font-weight: 700;
+  color: red;
+}
+
+ 
