@@ -1,0 +1,17 @@
+.scroll-view-item{
+  background-color: green;
+  height: 200px;
+}
+
+.scroll-view_H{
+  /* height: 245rpx; */
+  white-space: nowrap;
+}
+.scroll-view-item_H{
+  width: 100%;
+  /* height: 245rpx; */
+  display: inline-block;
+}
+.scroll-view-pic{
+  width: 100%;
+}

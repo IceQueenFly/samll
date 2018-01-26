@@ -1,0 +1,52 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/scroll/scroll",
+    "pages/swiper/swiper"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#6dc347",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "color":"#515151",
+        "selectedColor": "6dc347",
+        "iconPath": "pages/images/tabar/home.png",
+        "selectedIconPath": "pages/images/tabar/home-d.png"
+      },
+      {
+        "pagePath": "pages/scroll/scroll",
+        "text": "新车",
+        "iconPath": "pages/images/tabar/newcar.png",
+        "selectedIconPath": "pages/images/tabar/newcar-d.png"
+      },
+      {
+        "pagePath": "pages/scroll/scroll",
+        "text": "二手车",
+        "iconPath": "pages/images/tabar/oldcar.png",
+        "selectedIconPath": "pages/images/tabar/oldcar-d.png"
+      },
+      {
+        "pagePath": "pages/scroll/scroll",
+        "text": "养护",
+        "iconPath": "pages/images/tabar/curing.png",
+        "selectedIconPath": "pages/images/tabar/curing-d.png"
+      },
+      {
+        "pagePath": "pages/scroll/scroll",
+        "text": "个人中心",
+        "iconPath": "pages/images/tabar/person.png",
+        "selectedIconPath": "pages/images/tabar/person-d.png"
+      }
+    ]
+  }
+}
