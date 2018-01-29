@@ -15,29 +15,29 @@
 <view class='content'>
 <view class='recommend'>
 <view class='recommend-item1'>
-<p>凯迪拉客</p>
-<p>500w</p>
-<image src='{{func.deal_pic("/public/upload/goods/thumb/246/goods_thumb_246_373_366_e4fab6659054ff6326c545faa63d2e95.jpeg")}}'></image>
+<p>{{recommends[0].goods_name}}</p>
+<p>{{recommends[0].shop_price}}元</p>
+<image src='{{func.deal_pic(recommends[0].main_pic)}}'></image>
 </view>
 
 <!--两个小保养  -->
 <view class='recommend-item1'>
 <view class='curing'>
 <view>
-<p>斯蒂芬</p>
-<p>5654w</p>
+<p>{{recommends[1].goods_name}}</p>
+<p>{{recommends[1].shop_price}}元</p>
 </view>
 <view>
-<image src='{{func.deal_pic("/public/upload/goods/thumb/246/goods_thumb_246_373_366_e4fab6659054ff6326c545faa63d2e95.jpeg")}}'></image>
+<image src='{{func.deal_pic(recommends[1].main_pic)}}'></image>
 </view>
 </view>
 <view class='curing'>
 <view>
-<p>斯蒂芬</p>
-<p>5654w</p>
+<p>{{recommends[2].goods_name}}</p>
+<p>{{recommends[2].shop_price}}元</p>
 </view>
 <view>
-<image src='{{func.deal_pic("/public/upload/goods/thumb/246/goods_thumb_246_373_366_e4fab6659054ff6326c545faa63d2e95.jpeg")}}'></image>
+<image src='{{func.deal_pic(recommends[2].main_pic)}}'></image>
 </view>
 </view>
 </view>
@@ -47,31 +47,45 @@
  <view class='btn-view'><button class='btn-text'>养护产品</button><button >更多>></button></view>
  <!--goodslist start  -->
  <view class='goodslist'> 
- <view class='goods'>
- <image class='goods-pic' src='{{func.deal_pic("/public/upload/goods/thumb/246/goods_thumb_246_373_366_e4fab6659054ff6326c545faa63d2e95.jpeg")}}'></image>
+ <view class='goods'  wx:for="{{curings}}" wx:for-index="index" wx:for-item="curing" wx:key="key">
+ <image class='goods-pic' src='{{func.deal_pic(curing.main_pic)}}'></image>
  <view class='price'>
- <p class="goods-name">设计开发活动十分谨慎看法和</p>
- <p class="goods-price">码蜂乐价：122w</p>
+ <p class="goods-name">{{curing.goods_name}}</p>
+ <p class="goods-price">码蜂乐价：{{curing.shop_price}}</p>
  </view>
  </view>
-
-
-  <view class='goods'>
- <image class='goods-pic' src='{{func.deal_pic("/public/upload/goods/thumb/246/goods_thumb_246_373_366_e4fab6659054ff6326c545faa63d2e95.jpeg")}}'></image>
+ </view>
+ <!--goodslist end  -->
+</view>
+<!--新车  -->
+<view class='list'>
+ <view class='btn-view'><button class='btn-text'>新车系列</button><button >更多>></button></view>
+ <!--goodslist start  -->
+ <view class='goodslist'> 
+ <view class='goods'  wx:for="{{new_cars}}" wx:for-index="index" wx:for-item="new_car" wx:key="key">
+ <image class='goods-pic' src='{{func.deal_pic(new_car.main_pic)}}'></image>
  <view class='price'>
- <p class="goods-name">设计开发活动十分谨慎看法和</p>
- <p class="goods-price">码蜂乐价：122w</p>
+ <p class="goods-name">{{new_car.goods_name}}</p>
+ <p class="goods-price">首付：{{new_car.shop_price}}</p>
  </view>
  </view>
+ </view>
+ <!--goodslist end  -->
+</view>
 
-  <view class='goods'>
- <image class='goods-pic' src='{{func.deal_pic("/public/upload/goods/thumb/246/goods_thumb_246_373_366_e4fab6659054ff6326c545faa63d2e95.jpeg")}}'></image>
+<!--二手车  -->
+<view class='list'>
+ <view class='btn-view'><button class='btn-text'>二手车系列</button><button >更多>></button></view>
+ <!--goodslist start  -->
+ <scroll-view scroll-x='true' class='scroll' scroll-with-animation='true'> 
+ <view class='goods'  wx:for="{{used_cars}}" wx:for-index="index" wx:for-item="used_car" wx:key="key">
+ <image class='goods-pic' src='{{func.deal_pic(used_car.main_pic)}}'></image>
  <view class='price'>
- <p class="goods-name">设计开发活动十分谨慎看法和</p>
- <p class="goods-price">码蜂乐价：122w</p>
+ <p class="goods-name">{{used_car.goods_name}}</p>
+ <p class="goods-price">首付：{{used_car.shop_price}}</p>
  </view>
  </view>
- </view>
+ </scroll-view>
  <!--goodslist end  -->
 </view>
 

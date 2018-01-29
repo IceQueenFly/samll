@@ -48,6 +48,10 @@
   text-align: center;
   margin-top: 20rpx;
   font-weight: 700;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+
 }
 .recommend-item1 p:nth-child(2){
   color:#ffa237;
@@ -72,7 +76,7 @@
   width: 100%;
   height: 400rpx;
   display: inline-block;
-  margin-top: 4rpx;
+  margin-top: 30rpx;
 }
 .list .btn-view{
   width: 100%;
@@ -81,6 +85,7 @@
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
+  border-top: 1rpx solid #f3f3f3;
 }
 .list button{
    background-color:  #fff;
@@ -128,8 +133,8 @@
 }
 .price p{
   width: 80%;
-  display: inline-block;
-  text-align: left;
+  display: block;
+  text-align: center;
   overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;
@@ -144,4 +149,8 @@
   color: red;
 }
 
- 
+ .scroll {
+    white-space: nowrap;
+ }
+
+
