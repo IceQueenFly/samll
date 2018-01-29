@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/scroll/scroll",
-    "pages/swiper/swiper"
+    "pages/swiper/swiper",
+    "pages/goodslist/goodslist"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -24,19 +25,19 @@
         "selectedIconPath": "pages/images/tabar/home-d.png"
       },
       {
-        "pagePath": "pages/scroll/scroll",
+        "pagePath": "pages/goodslist/goodslist",
         "text": "新车",
         "iconPath": "pages/images/tabar/newcar.png",
         "selectedIconPath": "pages/images/tabar/newcar-d.png"
       },
       {
-        "pagePath": "pages/scroll/scroll",
+        "pagePath": "pages/goodslist/goodslist",
         "text": "二手车",
         "iconPath": "pages/images/tabar/oldcar.png",
         "selectedIconPath": "pages/images/tabar/oldcar-d.png"
       },
       {
-        "pagePath": "pages/scroll/scroll",
+        "pagePath": "pages/goodslist/goodslist",
         "text": "养护",
         "iconPath": "pages/images/tabar/curing.png",
         "selectedIconPath": "pages/images/tabar/curing-d.png"

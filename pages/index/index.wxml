@@ -44,10 +44,10 @@
 </view>
 <!--汽车养护  -->
 <view class='list'>
- <view class='btn-view'><button class='btn-text'>养护产品</button><button >更多>></button></view>
+ <view class='btn-view'><button class='btn-text'>养护产品</button><button bindtap='more'>更多>></button></view>
  <!--goodslist start  -->
  <view class='goodslist'> 
- <view class='goods'  wx:for="{{curings}}" wx:for-index="index" wx:for-item="curing" wx:key="key">
+ <view class='goods'  wx:for="{{curings}}" wx:for-index="index" wx:for-item="curing" wx:key="key" id="{{curing.goods_id}}">
  <image class='goods-pic' src='{{func.deal_pic(curing.main_pic)}}'></image>
  <view class='price'>
  <p class="goods-name">{{curing.goods_name}}</p>
@@ -57,12 +57,27 @@
  </view>
  <!--goodslist end  -->
 </view>
+
+<view class='list'>
+ <view class='btn-view'><button class='btn-text'>二手车系列</button ><button bindtap='more'>更多>></button></view>
+ <!--goodslist start  -->
+ <scroll-view scroll-x='true' class='scroll' scroll-with-animation='true'> 
+ <view class='goods'  wx:for="{{used_cars}}" wx:for-index="index" wx:for-item="used_car" wx:key="key" id="{{used_car.goods_id}}">
+ <image class='goods-pic' src='{{func.deal_pic(used_car.main_pic)}}'></image>
+ <view class='price'>
+ <p class="goods-name">{{used_car.goods_name}}</p>
+ <p class="goods-price">首付：{{used_car.shop_price}}</p>
+ </view>
+ </view>
+ </scroll-view>
+ <!--goodslist end  -->
+</view>
 <!--新车  -->
 <view class='list'>
- <view class='btn-view'><button class='btn-text'>新车系列</button><button >更多>></button></view>
+ <view class='btn-view'><button class='btn-text'>新车系列</button><button bindtap='more'>更多>></button></view>
  <!--goodslist start  -->
  <view class='goodslist'> 
- <view class='goods'  wx:for="{{new_cars}}" wx:for-index="index" wx:for-item="new_car" wx:key="key">
+ <view class='goods'  wx:for="{{new_cars}}" wx:for-index="index" wx:for-item="new_car" wx:key="key" id="{{new_car.goods_id}}">
  <image class='goods-pic' src='{{func.deal_pic(new_car.main_pic)}}'></image>
  <view class='price'>
  <p class="goods-name">{{new_car.goods_name}}</p>
@@ -73,20 +88,6 @@
  <!--goodslist end  -->
 </view>
 
-<!--二手车  -->
-<view class='list'>
- <view class='btn-view'><button class='btn-text'>二手车系列</button><button >更多>></button></view>
- <!--goodslist start  -->
- <scroll-view scroll-x='true' class='scroll' scroll-with-animation='true'> 
- <view class='goods'  wx:for="{{used_cars}}" wx:for-index="index" wx:for-item="used_car" wx:key="key">
- <image class='goods-pic' src='{{func.deal_pic(used_car.main_pic)}}'></image>
- <view class='price'>
- <p class="goods-name">{{used_car.goods_name}}</p>
- <p class="goods-price">首付：{{used_car.shop_price}}</p>
- </view>
- </view>
- </scroll-view>
- <!--goodslist end  -->
-</view>
+
 
 </view>

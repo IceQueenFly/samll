@@ -64,7 +64,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        console.log(res.data.data)
+
         that.setData({ recommends: res.data.data.recommends})
         that.setData({ curings: res.data.data.curings })
         that.setData({ new_cars: res.data.data.new_cars })
@@ -85,9 +85,18 @@ Page({
         })
       }
     })
-
-
-
-
-  }
+  },
+  more: function () {
+    wx.showModal({
+      title: '提示',
+      content: 'haha',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  } 
 })

@@ -1,6 +1,7 @@
 var service = "https://limecar.shellfly.com";
 var deal_pic = function (url) {
-  return service + url;
+  if (typeof (url) == "undefined") { return service; } else { return service + url;}
+  
 };
 module.exports = {
   deal_pic: deal_pic,
