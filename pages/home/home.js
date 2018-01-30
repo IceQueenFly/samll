@@ -11,7 +11,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(123)
+    this.bindload()
+    
+  },
+  bindload:function(){
+    setTimeout(this.gotoIndex,3000)
+  },
+  gotoIndex:function(){
+    wx.switchTab({
+      url: '/pages/index/index',
+    })
   },
 
   /**
@@ -53,7 +62,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    console.log(1)
+    
   },
 
   /**

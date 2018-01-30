@@ -21,7 +21,7 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  onLoad: function () {  
     var that = this;
     wx.request({
       url: getApp().data.service + '/Mobile/Index/banners.html', //仅为示例，并非真实的接口地址
@@ -87,16 +87,8 @@ Page({
     })
   },
   more: function () {
-    wx.showModal({
-      title: '提示',
-      content: 'haha',
-      success: function (res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
-      }
+    wx.navigateTo({
+      url: '/pages/scroll/scroll',
     })
   } 
 })

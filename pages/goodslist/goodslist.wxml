@@ -1,0 +1,20 @@
+<wxs src="./../common.wxs" module="func"/>
+<view>
+<image src='/pages/images/carlist.jpg' mode='widthFix'>
+<form>
+<input confirm-type="search" placeholder='搜索你想要的' name="keywords" type='text' bindconfirm="search"></input>
+</form>
+</image>
+</view>
+<!--goodslist start  -->
+<view>
+ <view class='goods'  wx:for="{{curings}}" wx:for-index="index" wx:for-item="curing" wx:key="key" id="{{curing.goods_id}}">
+ <image class='goods-pic' src='{{func.deal_pic(curing.main_pic)}}'></image>
+ <view class='price'>
+ <p class="goods-name">{{curing.goods_name}}</p>
+ <p class="goods-price">码蜂乐价：{{curing.shop_price}}</p>
+ <p class="goods-lower">最低首付：{{curing.shop_price}}</p>
+ </view>
+ </view>
+</view>
+<!-- goodslist end -->

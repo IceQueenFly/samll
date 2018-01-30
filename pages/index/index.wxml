@@ -1,4 +1,6 @@
-<wxs src="./../common.wxs" module="func"/> 
+ <!-- <view  style="height:120rpx;background-color:#535353;position:fixed;z-index:999;width:100%"><p style="color:#fff;text-align: center;display:block;height:120rpx;line-height:160rpx;font-size:30rpx">码蜂乐</p></view>
+ <view  style="height:120rpx;"></view>  -->
+<wxs src="./../common.wxs" module="func"/>
 <view>
 <swiper class='swiper' indicator-dots='{{swiper.indicatordots}}' indicator-color='{{swiper.indicatorcolor}}' indicator-active-color='{{swiper.indicatoractivecolor}}' autoplay='{{swiper.autoplay}}' interval='{{swiper.interval}}'>
 <block wx:for="{{imgUrls}}" wx:key="key">
