@@ -1,4 +1,5 @@
 var p = 0;
+var wxrequest = require('../../utils/request.js')
 Page({
 
   /**
@@ -13,29 +14,8 @@ Page({
    */
   onLoad: function (options) {
     p++;
-    this.request(p,'')    
     //获取数据
-    
-    // wx.request({
-    //   url: getApp().data.service + '/Mobile/Goods/index.html', //仅为示例，并非真实的接口地址
-    //   data: {
-    //     requst_code: 'MOBILE_GOODSLIST',
-    //     id:'138',
-    //     p:1,
-    //     keywords:''
-    //   },
-    //   method: 'POST',
-    //   header: {
-    //     'content-type': 'application/json' // 默认值
-    //   },
-    //   success: function (res) {
-
-    //     that.setData({ curings: res.data.data })
-
-    //   },
-    //   fail: function (res) {
-    //   }
-    // })
+    this.request(p,0,'')    
   },
 
   /**
@@ -71,7 +51,7 @@ Page({
    */
   onPullDownRefresh: function () {
     p=1;
-    this.request(p, '')
+    this.request(p, 0, '') 
   },
 
   /**
@@ -79,7 +59,7 @@ Page({
    */
   onReachBottom: function () {
     p++;
-    this.request(p,'')
+    this.request(p, 1, '') 
   },
 
   /**
@@ -97,28 +77,22 @@ Page({
   /**
    * 网络请求
    */
-  request: function (p, keywords){
+  request: function (p,pull, keywords){
     var that = this
-    wx.request({
-      url: getApp().data.service + '/Mobile/Goods/index.html', //仅为示例，并非真实的接口地址
-      data: {
-        requst_code: 'MOBILE_GOODSLIST',
-        id: '138',
-        p: p,
-        keywords: keywords
-      },
-      method: 'POST',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
+    //获取主页数据
+    wxrequest.request({ url: "/Mobile/Goods/index" }, { requst_code: 'MOBILE_GOODSLIST', id: '138', p: p, keywords: keywords}, function success (res) {
         var curings = that.data.curings;
-        var list =curings.concat(res.data.data)
-        that.setData({ curings: list })
-
-      },
-      fail: function (res) {
-      }
-    })
+        if(pull==1){
+          var list = curings.concat(res.data.data)
+          that.setData({ curings: list })
+        }else{
+          that.setData({ curings: res.data.data })
+        }
+    }, function fail (res) {
+      console.log(res)
+    }
+    )
   }
+
+  
 })
